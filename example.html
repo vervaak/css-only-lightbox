@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS-Lightbox</title>
+        <link rel="stylesheet" href="./css-lightbox.css" type="text/css">
+        <link rel="stylesheet" href="./css-lightbox-animations.css" type="text/css">
+    </head>
+    <body>
+
+        <!-- Some basic styling -->
+        <style>
+            body{
+                text-align: center;
+                padding-top: 100px; 
+            }
+
+            pre{
+                
+                 white-space: pre-wrap;       /* css-3 */
+                 white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+                 white-space: -pre-wrap;      /* Opera 4-6 */
+                 white-space: -o-pre-wrap;    /* Opera 7 */
+                 word-wrap: break-word;       /* Internet Explorer 5.5+ */                
+            }
+
+.lightbox-inside{
+    padding: 12px;
+    margin-top: 5%;
+    min-height: 200px;
+    width: 720px;
+    text-align: left;
+    overflow: scroll;
+
+}    
+@media screen and (max-width: 500px) {
+    .lightbox-inside {
+        width: 300px;
+    }    
+}            
+        </style>
+
+        <h1>
+            <u><label for="my-first-lightbox">
+                <!-- Clicking this label will display the lightbox-->
+                Step 1
+            </label></u>
+        </h1>
+        <input id="my-first-lightbox" type="checkbox" class="css-lightbox-toggle" />
+        <div class="css-lightbox"> 
+            <label class="lightbox-outside lightbox-animation-fade-in" for="my-first-lightbox" ></label>
+            <div  class="lightbox-inside lightbox-animation-fade-in">
+                <!-- Place conent here-->
+                <h3>Step 1.</h3>
+                <p>Include <b>css-lightbox.css</b> in your html. 
+                    For default fade-in animations also include <b>css-lightbox-animations.css.</b></p>
+<pre style='color:#000020;background:#f6f8ff;'><span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>link</span><span style='color:#474796; '> </span><span style='color:#074726; '>rel</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"stylesheet"</span><span style='color:#474796; '> </span><span style='color:#074726; '>href</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"./css-lightbox.css"</span><span style='color:#474796; '> </span><span style='color:#074726; '>type</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"text/css"</span><span style='color:#0057a6; '>></span>
+</pre>                
+<pre style='color:#000020;background:#f6f8ff;'><span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>link</span><span style='color:#474796; '> </span><span style='color:#074726; '>rel</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"stylesheet"</span><span style='color:#474796; '> </span><span style='color:#074726; '>href</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"./css-lightbox-animations.css"</span><span style='color:#474796; '> </span><span style='color:#074726; '>type</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"text/css"</span><span style='color:#0057a6; '>></span>
+</pre>          
+                <p>Define style of element with class <b>.lightbox-inside</b>, which will contain your content.</p>
+<pre style='color:#000020;background:#f6f8ff;'>.lightbox-inside{
+    padding: <span style='color:#008c00; '>12</span>px;
+    margin-top: <span style='color:#008c00; '>5</span>%;
+    min-height: <span style='color:#008c00; '>200</span>px;
+    width: <span style='color:#008c00; '>720</span>px;
+    text-align: left;
+    overflow: scroll;
+
+}    
+@media screen and (max-width: <span style='color:#008c00; '>500</span>px) {
+    .lightbox-inside {
+        width: <span style='color:#008c00; '>300</span>px;
+    }    
+}
+</pre>
+            </div>
+        </div>
+
+        <!-- Example two-->
+
+<h1>
+    <u><label for="my-second-lightbox">Step 2</label></u>
+</h1>
+
+<input id="my-second-lightbox" type="checkbox" class="css-lightbox-toggle" />
+<div class="css-lightbox"> 
+    <label class="lightbox-outside lightbox-animation-fade-in" for="my-second-lightbox" ></label>
+    <div  class="lightbox-inside lightbox-animation-slide-down">
+        <h3>Step 2.</h3>
+        <p>Use this HTML as a template.<b>  Label's for-attributes must match the checkbox' id.</b></p>
+<pre style='color:#000020;background:#f6f8ff;'><span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>label</span><span style='color:#474796; '> </span><span style='color:#074726; '>for</span><span style='color:#308080; '>=</span><span style='color:#1060b6; background: yellow '>"MY-LIGHTBOX"</span><span style='color:#0057a6; '>></span>
+CLICK ME
+<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>label</span><span style='color:#0057a6; '>></span>
+
+<span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>input</span><span style='color:#474796; '> </span><span style='color:#074726; '>id</span><span style='color:#308080; '>=</span><span style='color:#1060b6; background: yellow;' >"MY-LIGHTBOX"</span><span style='color:#474796; '> </span><span style='color:#074726; '>type</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"checkbox"</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"css-lightbox-toggle"</span><span style='color:#474796; '> </span><span style='color:#0057a6; '>/></span>
+<span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6;  '>"css-lightbox"</span><span style='color:#0057a6; '>></span> 
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>label</span><span style='color:#474796; '>  </span><span style='color:#074726; '>for</span><span style='color:#308080; '>=</span><span style='color:#1060b6;background: yellow; '>"MY-LIGHTBOX"</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"lightbox-outside lightbox-animation-fade-in"</span><span style='color:#474796; '> </span><span style='color:#0057a6; '>></span><span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>label</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#474796; '>  </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"lightbox-inside lightbox-animation-slide-down"</span><span style='color:#0057a6; '>></span>
+    
+        Content
+
+    <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+</pre>
+        <p>That's it.</p>
+    </div>
+</div>
+        <a href="https://github.com/vervaak/css-only-lightbox/blob/master/README.md">Github</a>
+    </body>
+</html>
