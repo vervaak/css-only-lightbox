@@ -12,6 +12,7 @@ Include css-lightbox.css in your html. For default fade-in animations also inclu
 ```
 
 Define style of element with class .lightbox-inside, which will contain your content.
+Here is an example:
 ```
 .lightbox-inside{
     padding: 12px;
@@ -30,7 +31,7 @@ Define style of element with class .lightbox-inside, which will contain your con
 ```
 ##Step 2.
 
-Use this HTML as a template. Label's for-attributes must match the checkbox' id.
+Use this HTML as a template. Label's **for-attributes** must match the checkbox' id.
 ```
 <label for="MY-LIGHTBOX">
 CLICK ME
